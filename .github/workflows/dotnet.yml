@@ -6,12 +6,12 @@ on:
       - master
   pull_request:
     branches:
-      - master  
+      - master
 
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
 
+  setup:
+    runs-on: windows-latest
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -22,17 +22,32 @@ jobs:
         dotnet-version: '7.0.x'
     - run: dotnet workload install maui --ignore-failed-sources
     
+  build:
+    needs: setup
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
     - name: Restore dependencies
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build -f net7.0-windows10.0.19041.0 -c Release -p:RuntimeIdentifierOverride=win10-x64
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
-
+      
+  test: 
+    needs: [build, setup]
+    runs-on: windows-latest
+    steps:
+    - name: test
+      run: dotnet test --no-build --verbosity normal
+  
   deploy:
-    needs: [build-and-test]
+    needs: [build]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 
