@@ -1,0 +1,38 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:WODWarriors.ViewModel"
+             x:DataType="viewModel:RegistrationViewModel"
+             x:Class="WODWarriors.View.RegistrationPage"
+             Title="Registration">
+
+
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0"
+           Grid.Column="0"
+           Grid.RowSpan="1"
+           Grid.ColumnSpan="1"
+           Source="colisium.jpg"
+           Aspect="AspectFill" />
+        <StackLayout Padding="20" Spacing="20" WidthRequest="400" HeightRequest="580"
+                 HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="Gray">
+            <Image Source="logo.png" HeightRequest="180" WidthRequest="300" HorizontalOptions="Center" />
+
+            <Entry Placeholder="Username" Text="{Binding Username}" />
+            <Entry Placeholder="Email" Text="{Binding Email}" />
+            <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" />
+            <Button Text="Register" Command="{Binding GetRegisterCommand}" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Already have an account? " />                
+            </StackLayout>
+            <Button Text="Login" Command="{Binding GoToLoginCommand}" FontSize="12" HeightRequest="40" WidthRequest="70"/>
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>

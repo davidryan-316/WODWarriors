@@ -1,0 +1,67 @@
+﻿[
+  {
+    "Name": "Target Muscle Groups",
+    "Image": "",
+    "Description": ""
+  },
+  {
+    "Name": "abdominals",
+    "Image": "captains_chair_knee_raise.gif",
+    "Description": "Develop a better core, for all compound lifts!"
+  },
+  {
+    "Name": "biceps",
+    "Image": "preacher_curl.gif",
+    "Description": "Stronger arms for lifting and pulling power"
+  },
+  {
+    "Name": "calves",
+    "Image": "donkey_calf_raise.gif",
+    "Description": "Improve speed, power and explosiveness"
+  },
+  {
+    "Name": "chest",
+    "Image": "barbell_benchpress_side_view.gif",
+    "Description": "Upper body strength, improve push movements"
+  },
+  {
+    "Name": "glutes",
+    "Image": "barbell_full_squat.gif",
+    "Description": "Enhance athletic performance and reduce risk of injury"
+  },
+  {
+    "Name": "hamstrings",
+    "Image": "hamstring_romanian_deadlift.gif",
+    "Description": "Strong Hamstrings improve agility and prevent knee injury"
+  },
+  {
+    "Name": "lats",
+    "Image": "chin_ups.gif",
+    "Description": "Improve pulling movements and posture"
+  },
+  {
+    "Name": "lower_back",
+    "Image": "barbell_deadlift_front_view.gif",
+    "Description": "Supports the spine and prevents lower back pain"
+  },
+  {
+    "Name": "middle_back",
+    "Image": "barbell_bent_over_row.gif",
+    "Description": "Improved posture and pulling movements"
+  },
+  {
+    "Name": "quadriceps",
+    "Image": "barbell_full_squat.gif",
+    "Description": "Improve knee stability and running performance"
+  },
+  {
+    "Name": "traps",
+    "Image": "kb_cj.gif",
+    "Description": "Create a better posture and pulling movements"
+  },
+  {
+    "Name": "triceps",
+    "Image": "cable_tricep_pushdown.gif",
+    "Description": "Strong triceps improve pushing movements and arm definition"
+  }
+]

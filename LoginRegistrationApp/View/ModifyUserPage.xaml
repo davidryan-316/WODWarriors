@@ -1,0 +1,63 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:WODWarriors.ViewModel"
+             xmlns:Model="clr-namespace:WODWarriors.Model"
+             x:DataType="viewModel:ModifyUserViewModel"
+             x:Class="WODWarriors.View.ModifyUserPage"
+             Title="Modify User">
+
+
+    <Grid ColumnDefinitions="*"
+      ColumnSpacing="5"
+      RowDefinitions="*,Auto"
+      RowSpacing="10"
+      BackgroundColor="Black">
+        <Image Grid.Row="0"
+           Grid.RowSpan="2"
+           Source="colisium.jpg"
+           Opacity=".6"
+           Aspect="AspectFill" />
+        <Label Grid.Row="0" Grid.Column="2" Text="Modify Users" FontSize="24" HorizontalOptions="Center" TextColor="White"/>
+        <StackLayout Spacing="20" BackgroundColor="Gray" Padding="20" WidthRequest="400" HeightRequest="550"
+        HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0">
+            <Image Source="logo.png" HeightRequest="180" WidthRequest="300" HorizontalOptions="Center" />
+
+            <ListView Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Users}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="Model:User">
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                <CheckBox VerticalOptions="Center" IsChecked="{Binding IsSelected}" />
+                                <Label Text="{Binding Username}"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="LightGray"
+                                       FontSize="20"
+                                       FontAttributes="Bold" />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Grid.Row="4" Grid.Column="3" Text="Delete Selected Users"
+            Command="{Binding DeleteSelectedUsersCommand}"
+            FontSize="13"
+            BackgroundColor="Red"
+            HeightRequest="40"
+            WidthRequest="160"
+            TextColor="White" />
+
+            <!--<Button Grid.Row="4" Grid.Column="1" Text="Edit User"
+            Command="{Binding EditUserCommand}"
+                CommandParameter="{Binding .}"
+            HeightRequest="60"
+            WidthRequest="190"
+            BackgroundColor="#71c1e3"
+            TextColor="White" />-->
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>

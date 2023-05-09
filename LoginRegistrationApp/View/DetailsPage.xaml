@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:WODWarriors.ViewModel"
+             xmlns:model="clr-namespace:WODWarriors.Model"
+             x:DataType="viewModel:DetailsViewModel"
+             x:Class="WODWarriors.View.DetailsPage"
+             Title="Workout Menu">
+    
+    <Grid ColumnDefinitions="*"
+      ColumnSpacing="5"
+      RowDefinitions="*,Auto"
+      RowSpacing="10"
+      BackgroundColor="Black">
+        <Image Grid.Row="0"
+           Grid.RowSpan="2"
+           Source="colisium.jpg"
+           Opacity=".6"
+           Aspect="AspectFill" />
+        <Button Text="View Workouts"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="0,0,500,0"
+                    HeightRequest="60" 
+                    WidthRequest="160"
+                    Command="{Binding GetProductsCommand}"
+                    HorizontalOptions="Fill" />
+        <Button Text="Calorie Calculator"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="500,0,0,0"
+                    HeightRequest="60" 
+                    WidthRequest="160"
+                    Command="{Binding GoToCalorieCommand}"
+                    HorizontalOptions="Fill" />
+        <ScrollView>
+            <VerticalStackLayout>
+                <CollectionView 
+                Grid.ColumnSpan="5"
+                ItemsSource="{Binding Products}"
+                SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Movement">
+                            <Grid Padding="10">
+                                <ScrollView>
+                                    <StackLayout VerticalOptions="StartAndExpand" Padding="20">
+                                        <Frame HeightRequest="125" Margin="10,0,10,0" Padding="3,3,3,3" BorderColor="#71c1e3" BackgroundColor="#71c1e3">
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:DetailsViewModel}}, Path= GoToWorkoutCommand }"/>
+                                            </Frame.GestureRecognizers>
+                                        <Grid Padding="0" ColumnDefinitions="*,*,*,*,Auto" BackgroundColor="Black">
+                                                <Label Text="{Binding Name}"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                    TextColor="LightGray"
+                                                    Grid.Column="1"
+                                                    FontSize="20"
+                                                    FontAttributes="Bold"/>
+                                                <Image
+                                                    Aspect="AspectFill"
+                                                    HeightRequest="125"                                                    
+                                                    Source="{Binding Image}"
+                                                    WidthRequest="125" />
+                                                <VerticalStackLayout
+                                                    Grid.Column="2"
+                                                    VerticalOptions="Center"
+                                                    Padding="10">
+                                                    <Label Text="{Binding Description}"
+                                                   TextColor="LightGray"
+                                                    FontSize="20"
+                                                    FontAttributes="Bold"/>                                                    
+                                                </VerticalStackLayout>
+                                            </Grid>
+                                        </Frame>
+                                    </StackLayout>
+                                </ScrollView>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

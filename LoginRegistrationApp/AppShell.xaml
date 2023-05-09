@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="WODWarriors.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:WODWarriors"
+    Title="WODWarriors"
+    Shell.FlyoutBehavior="Flyout">
+
+    <Shell.FlyoutHeader>
+        <Border BackgroundColor="Black"
+                StrokeThickness="2">
+            <Grid ColumnDefinitions="Auto, *"
+                    Padding="15"
+                  ColumnSpacing="20">
+                <Image Grid.Column="0"
+                Source="logo.png"
+                   Aspect="AspectFill"
+                   HeightRequest="50"
+                   WidthRequest="50"/>
+
+                <Label Grid.Column="1"
+                   Text="WODWarriors"
+                   VerticalTextAlignment="Center"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="#71c1e3"/>
+            </Grid>
+        </Border>
+    </Shell.FlyoutHeader>
+    <Shell.FlyoutFooter>
+        <Label Text="Copyright | L00177808"
+               BackgroundColor="Black"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               Padding="0,10"/>
+    </Shell.FlyoutFooter>
+    <ShellContent        
+        Title="Home"        
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Icon="home.png"
+        Route="MainPage" />
+    <ShellContent
+        Title="About"        
+        ContentTemplate="{DataTemplate local:About}"
+        Icon="about.png"
+        Route="About" />
+    <ShellContent
+        Title="Privacy"        
+        ContentTemplate="{DataTemplate local:Privacy}"
+        Icon="privacy.jpg"
+        Route="Privacy" />
+</Shell>

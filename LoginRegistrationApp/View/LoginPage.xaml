@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:WODWarriors.ViewModel"
+             xmlns:model="clr-namespace:WODWarriors.Model"
+             x:DataType="viewModel:LoginViewModel"            
+             x:Class="WODWarriors.View.LoginPage"
+             Title="Login">
+
+    <Grid BackgroundColor="Black">        
+        <Image Source="colisium.jpg" Aspect="AspectFill" HeightRequest="550" WidthRequest="1400" Opacity=".3" 
+           HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0" />        
+        <StackLayout Spacing="20" BackgroundColor="Gray" Padding="20" WidthRequest="400" HeightRequest="550"
+                 HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0"
+                 Grid.ZIndex="1">
+
+            <Image Source="logo.png" HeightRequest="180" WidthRequest="300" HorizontalOptions="Center" />
+            <Entry Placeholder="Username" Text="{Binding Username}" BackgroundColor="DarkGray" TextColor="Black"/>
+            <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" BackgroundColor="DarkGray" TextColor="Black"/>
+            <Button Text="Login" Command="{Binding GoToDetailsCommand}" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Picker Title="Select an action" SelectedItem="{Binding SelectedAction}" Margin="120,0,0,0" HorizontalOptions="Center" WidthRequest="120" TitleColor="White" TextColor="White" BackgroundColor="White">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Register</x:String>
+                            <x:String>Modify User</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+            <Button Text="Go" Command="{Binding NavigateCommand}" FontSize="12" HeightRequest="40" WidthRequest="60" Grid.Column="0"/>
+
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WODWarriors.Privacy"
+             Title="Privacy">
+    <Grid BackgroundColor="Black">
+        <Image Source="colisium.jpg" Aspect="AspectFill" HeightRequest="550" WidthRequest="1400" Opacity=".3" 
+           HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0" />
+        <Grid Padding="20" RowSpacing="20" WidthRequest="900" HeightRequest="300"
+          HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="WODWarriors Privacy Policy!" FontSize="24" HorizontalOptions="Center" TextColor="Black" Grid.Row="0" />
+            <Label Text="WODWarriors est. 2023" HorizontalTextAlignment="Center" Grid.Row="1" />
+            <Label Text="Here at WODWarriors personal information and data is taken very seriously. We can assure you all personal data meets regulatory standards and will not be shared to any third parties without your consent." HorizontalTextAlignment="Center" Grid.Row="3" />
+            <Label Text="Contact Info: info@WODWarriors.com" HorizontalTextAlignment="Center" Grid.Row="5" />
+        </Grid>
+    </Grid>
+
+
+</ContentPage>

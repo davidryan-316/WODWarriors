@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WODWarriors.About"
+             Title="About">
+    <Grid BackgroundColor="Black">
+
+        <Image Source="colisium.jpg" Aspect="AspectFill" HeightRequest="550" WidthRequest="1400" Opacity=".3" 
+           HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0" />
+        <Grid Padding="20" RowSpacing="20" WidthRequest="900" HeightRequest="300"
+          HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="About WODWarriors!"
+                   HorizontalTextAlignment="Center" Grid.Row="0" FontSize="24"/>
+            <Label Text="WODWarriors est. 2023"
+                   HorizontalTextAlignment="Center" Grid.Row="1"/>
+            <Label Text="The future of fitness is here. Our application is here to help you achieve your goals and transform your body and mind. With personalised workout plans, caloric nutritional guidance from certified trainers, we offer a variety of fitness classes and programs, our app is designed to help you achieve lasting results. Whether you're looking to lose weight, build muscle, or simply improve your overall health and wellbeing, our app has everything you need to succeed. Join our community of like-minded individuals today and start your journey towards a happier, healthier you."
+                   HorizontalTextAlignment="Center" Grid.Row="2"/>
+            <Label Text="Contact Info: info@WODWarriors.com"
+                   HorizontalTextAlignment="Center" Grid.Row="5"/>
+        </Grid>
+      </Grid>
+</ContentPage>

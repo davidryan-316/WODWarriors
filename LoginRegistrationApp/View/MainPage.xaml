@@ -1,0 +1,51 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:WODWarriors.ViewModel"
+             xmlns:model="clr-namespace:WODWarriors.Model"
+             x:DataType="viewModel:MainViewModel"
+             Title="WODWarriors"
+             x:Class="WODWarriors.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout Padding="20" Spacing="20" VerticalOptions="Center" BackgroundColor="Black">
+            <Label Text="Welcome WODWarriors Fitness!" FontSize="24" HorizontalOptions="Center" TextColor="White" />
+
+            <Grid>
+                <Image Source="Logo.png" Aspect="AspectFill" HeightRequest="550" WidthRequest="550" Opacity="1" 
+                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.ZIndex="1" />
+                <Image Source="colisium.jpg" Aspect="AspectFill" HeightRequest="550" WidthRequest="1400" Opacity=".3" 
+                       HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.ZIndex="0" />
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="location.jpg" HeightRequest="40" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="0"/>
+                <Label Text="Train anywhere in the world" TextColor="White" FontSize="12" VerticalOptions="Center" HorizontalOptions="End" Grid.Column="0" Margin="0,0,70,0" />
+
+                <Button Text="Let's Get Started!" Command="{Binding GoToLoginCommand}"
+                        WidthRequest="170"
+                        HeightRequest="40" Grid.Column="2"
+                        Margin="20,0,0,0"/>
+
+                <Image Source="run.jpg" HeightRequest="40" WidthRequest="40" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="3" Margin="240,0,0,0"/>
+                <Label Text="Stronger everyday - WODWarriors" TextColor="White" FontSize="12" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="4" />
+            </Grid>
+
+        </StackLayout>        
+    </Grid>
+</ContentPage>
