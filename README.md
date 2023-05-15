@@ -2,8 +2,6 @@
 ## Student Number :	L00177808
 ## Student Name :	David Ryan
 
-Last Updated: 14/5/23
-Languages: C#,XAML,SQLite
 
 Table of Content:
 -Project Principles
