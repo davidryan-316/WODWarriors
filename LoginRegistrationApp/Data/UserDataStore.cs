@@ -49,19 +49,6 @@ namespace WODWarriors.Data
             int rowsAffected = await command.ExecuteNonQueryAsync();
             return rowsAffected > 0;
         }
-        //public async Task<bool> EditUserAsync(int userId, string newUsername, string newEmail)
-        //{
-        //    using var connection = new SqliteConnection($"Data Source={_databasePath}");
-        //    await connection.OpenAsync();
-        //    using var command = connection.CreateCommand();
-        //    command.CommandText = "UPDATE Users SET Username = @Username, Email = @Email WHERE Id = @Id;";
-        //    command.Parameters.AddWithValue("@Username", newUsername);
-        //    command.Parameters.AddWithValue("@Email", newEmail);
-        //    command.Parameters.AddWithValue("@Id", userId);
-
-        //    int rowsAffected = await command.ExecuteNonQueryAsync();
-        //    return rowsAffected > 0;
-        //}
         //FOR USER DELETE PAGE
         public async Task<List<User>> GetAllUsersAsync()
         {

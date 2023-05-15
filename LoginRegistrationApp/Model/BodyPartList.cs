@@ -10,8 +10,5 @@ public class BodyPartList : List<BodyPart>
 {
 }
 
-//public class BodyPartList : List<JObject>
-//{
-//    public List<BodyPart> BodyParts { get; set; } = new ();
-//}
+
 
