@@ -78,6 +78,7 @@ Recommendation - Recommended to use Windows machine.
 - Calorie Calculation: https://www.omnicalculator.com/health/bmr-harris-benedict-equation
 - Gifs: https://www.inspireusafoundation.org/weightlifting/
 - API https://api-ninjas.com/api/exercises
+- Unit Tests: https://www.youtube.com/watch?v=C9vIDLQwc7M / https://learn.microsoft.com/en-us/dotnet/maui/
 
 # 8.Contributor:
 -L00177808 David Ryan
