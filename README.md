@@ -60,6 +60,8 @@ Recommendation - Recommended to use Windows machine.
 - Newtonsoft.Json 13.0.2
 - System.Net.Http.Json 7.0.1
 - System.Runtime.InteropServices.NFloat.Internal 6.0.1
+- xunit.runner.visualstudio 2.4.5
+- xunit 2.4.1
 
 # 7.Credits (Reference videos & Webpages):
 - Build a basic app https://learn.microsoft.com/en-us/dotnet/maui/get-started/first-app?pivots=devices-windows&tabs=vswin
