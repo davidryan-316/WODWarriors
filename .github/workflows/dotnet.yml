@@ -34,7 +34,7 @@ jobs:
       run: dotnet restore
 
     - name: Build
-      run: dotnet build -f net7.0-windows10.0.19041.0 -c Release -p:RuntimeIdentifierOverride=win10-x64
+      run: dotnet build
 
     - name: Test
       run: dotnet test --no-build --verbosity normal
@@ -49,7 +49,7 @@ jobs:
      - name: Restore dependencies
        run: dotnet restore
      - name: test
-       run: dotnet test --no-build --verbosity normal
+       run: dotnet test 
   
   deploy:
     needs: [build]
