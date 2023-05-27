@@ -51,7 +51,7 @@ public partial class LoginViewModel : BaseViewModel
 
 
     [RelayCommand]
-    async Task GoToDetailsAsync()
+    public async Task GoToDetailsAsync()
 {
     await Task.Delay(100);
 
