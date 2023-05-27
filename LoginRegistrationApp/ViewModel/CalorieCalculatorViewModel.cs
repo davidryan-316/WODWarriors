@@ -62,7 +62,7 @@ namespace WODWarriors.ViewModel
         }
 
         [RelayCommand]
-        async Task Calculate()
+        public async Task Calculate()
         {
             await Task.Delay(50);
 

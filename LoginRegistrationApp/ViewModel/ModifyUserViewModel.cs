@@ -35,7 +35,7 @@ public partial class ModifyUserViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    async Task DeleteSelectedUsers()
+    public async Task DeleteSelectedUsers()
     {
         await Task.Delay(50);
 
@@ -64,29 +64,7 @@ public partial class ModifyUserViewModel : BaseViewModel
         {
             Users.Add(user);
         }
-    }
-    //[RelayCommand]
-    //async Task EditUserAsync(User user)
-    //{
-    //    await Task.Delay(50);
-
-    //    var newUsername = await Application.Current.MainPage.DisplayPromptAsync("Edit User", "Enter a new username", "OK", "Cancel", user.Username, -1, Keyboard.Default, "");
-    //    if (string.IsNullOrEmpty(newUsername))
-    //    {
-    //        return;
-    //    }
-
-    //    var newEmail = await Application.Current.MainPage.DisplayPromptAsync("Edit User", "Enter a new email", "OK", "Cancel", user.Email, -1, Keyboard.Email, "");
-    //    if (string.IsNullOrEmpty(newEmail))
-    //    {
-    //        return;
-    //    }
-
-    //    user.Username = newUsername;
-    //    user.Email = newEmail;
-    //    await _userDataStore.EditUserAsync(user.Id, newUsername, newEmail);
-    //}
-    
+    }   
 
 }
    

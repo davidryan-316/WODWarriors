@@ -8,11 +8,6 @@ using System.Threading.Tasks;
 namespace WODWarriors.ViewModel;
 public class BaseViewModel : CommunityToolkit.Mvvm.ComponentModel.ObservableObject
 {
-    //[ObservableProperty]
-    //string title;
-
-    //[ObservableProperty]
-    private string name;
 
     private bool _isBusy;
     public bool IsBusy

@@ -39,7 +39,7 @@ namespace WODWarriors.ViewModel
         }
 
         [RelayCommand]
-        async Task GetRegister()
+        public async Task GetRegister()
         {
             if (IsBusy) return;
 

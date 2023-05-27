@@ -21,7 +21,7 @@ public partial class LoginViewModel : BaseViewModel
     private string _username;
     private string _password;
     private string _selectedAction;
-    private string welcomeMessage;
+    
 
     public string Username { get => _username; set => SetProperty(ref _username, value); }
 
@@ -51,7 +51,7 @@ public partial class LoginViewModel : BaseViewModel
 
 
     [RelayCommand]
-    async Task GoToDetailsAsync()
+    public async Task GoToDetailsAsync()
 {
     await Task.Delay(100);
 

@@ -14,7 +14,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Text="WODWarriors Privacy Policy!" FontSize="24" HorizontalOptions="Center" TextColor="Black" Grid.Row="0" />
             <Label Text="WODWarriors est. 2023" HorizontalTextAlignment="Center" Grid.Row="1" />
