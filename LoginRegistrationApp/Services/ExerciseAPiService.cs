@@ -16,7 +16,7 @@ namespace WODWarriors.Services
 
         private BodyPartList _body = new();
 
-        internal async Task<BodyPartList> GetWorkoutDetailsAsync(string muscle)
+        public async Task<BodyPartList> GetWorkoutDetailsAsync(string muscle)
         {
             var request = new HttpRequestMessage
             {

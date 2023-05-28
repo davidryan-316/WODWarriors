@@ -13,7 +13,8 @@ namespace WODWarriors.ViewModel
         private string _username;
         private string _email;
         private string _password;
-
+        public readonly IEnumerable<char> ErrorMessage;
+        public readonly bool IsRegistered;
 
         public string Username
         {

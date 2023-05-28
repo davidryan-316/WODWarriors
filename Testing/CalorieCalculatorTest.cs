@@ -10,13 +10,12 @@ namespace Testing
     public class CalorieCalculatorTest
     {
         [Fact]
-        public void CalorieCalculatorViewModelTest()
+        public void CalorieCalculator_ViewModelTest()
         {
             // Arrange
             var viewModel = new CalorieCalculatorViewModel();
 
             // Assert
-            // Verify that the properties are initialized to their expected values
             Assert.Null(viewModel.Age);
             Assert.Null(viewModel.Weight);
             Assert.Null(viewModel.Height);
@@ -28,9 +27,9 @@ namespace Testing
         {
             // Arrange
             var viewModel = new CalorieCalculatorViewModel();
-            viewModel.Age = 30;
-            viewModel.Weight = 70;
-            viewModel.Height = 170;
+            viewModel.Age = 31;
+            viewModel.Weight = 75;
+            viewModel.Height = 175;
             viewModel.Gender = "Male";
             viewModel.ActivityLevel = "Moderately Active";
 

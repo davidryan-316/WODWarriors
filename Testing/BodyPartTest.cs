@@ -10,12 +10,12 @@ namespace UnitTests
     public class BodyPartTest
     {
         [Fact]
-        public void BodyPart_Properties_Should_Be_Set_Correctly()
+        public void BodyPart_Set_Correctly()
         {
             // Arrange
             string name = "Legs";
             string type = "Lower Body";
-            string muscle = "Quadriceps";
+            string muscle = "quadriceps";
             string equipment = "Barbell";
             string difficulty = "Intermediate";
             string instructions = "Perform squats with proper form.";
