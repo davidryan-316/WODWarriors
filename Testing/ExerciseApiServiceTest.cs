@@ -17,7 +17,7 @@ namespace Testing
         }
 
         [Fact]
-        public async Task GetWorkoutDetailsAsync_ValidMuscle_ReturnsBodyPartList()
+        public async Task GetWorkoutDetailsAsync_ReturnsBodyPartList()
         {
             // Arrange
             string muscle = "legs";
