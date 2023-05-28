@@ -33,5 +33,54 @@ namespace UnitTests
             Assert.Equal(title, movement.Title);
             Assert.Equal(description, movement.Description);
         }
+        [Fact]
+        public void Movement_For_Null_Values()
+        {
+            // Arrange
+            string? name = null;
+            string? image = null;
+            string? title = null;
+            string? description = null;
+
+            // Act
+            var movement = new Movement
+            {
+                Name = name,
+                Image = image,
+                Title = title,
+                Description = description
+            };
+
+            // Assert
+            Assert.Null(movement.Name);
+            Assert.Null(movement.Image);
+            Assert.Null(movement.Title);
+            Assert.Null(movement.Description);
+        }
+
+        [Fact]
+        public void Movement_For_Empty_Values()
+        {
+            // Arrange
+            string name = string.Empty;
+            string image = string.Empty;
+            string title = string.Empty;
+            string description = string.Empty;
+
+            // Act
+            var movement = new Movement
+            {
+                Name = name,
+                Image = image,
+                Title = title,
+                Description = description
+            };
+
+            // Assert
+            Assert.Equal(name, movement.Name);
+            Assert.Equal(image, movement.Image);
+            Assert.Equal(title, movement.Title);
+            Assert.Equal(description, movement.Description);
+        }
     }
 }
