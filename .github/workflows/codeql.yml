@@ -7,12 +7,12 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "master" ]
   schedule:
-    - cron: '24 11 * * 2'
+    - cron: '0 9 * * *'
 
 jobs:
   analyze:
-    name: Analyze
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
+    name: Security check for WODWarriors
+    runs-on: ${{ (matrix.language == 'ubuntu-latest') }}
     permissions:
       actions: read
       contents: read
