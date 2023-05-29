@@ -4,15 +4,16 @@
 
 
 Table of Content:
--Project Principles
--Project Introduction 
--Project Scope
--Deployment
--Installation & NuGet Packages
--Credits
--Contributors
--Technologies Used
--Errors or bugs
+- 1.Project Principles
+- 2.Project Introduction 
+- 3.Project Scope
+- 4.Deployment
+- 5.Api contribution
+- 6.Installation & NuGet Packages
+- 7.Credits
+- 8.Contributors
+- 9.Technologies Used
+- 10.Errors or bugs
 
 # 1.Project Principles:
 1.1 Meet Deadline 24/5/23
@@ -90,6 +91,8 @@ Recommendation - Recommended to use Windows machine.
 -XAML
 -C# 
 -NuGet Packages
+-GitHub : Automated testing/ Code Reviews/Feedback mechanisms
+-CodeQL
 
 # 10.Errors or bugs:
 There are no issues found when running the application (last ran 12/5/23)
