@@ -31,7 +31,7 @@ namespace Testing
             viewModel.Weight = 75;
             viewModel.Height = 175;
             viewModel.Gender = "Male";
-            viewModel.ActivityLevel = "Moderately Active";
+            viewModel.ActivityLevel = "Moderately Active"; 
 
             // Act
             await viewModel.Calculate();
